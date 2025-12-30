@@ -12,7 +12,10 @@ create table public.projects (
   cover_image_url text, -- URL from Storage
   gallery_urls text[], -- Array of URLs
   category text, -- 'Architecture', 'Product Design', etc.
-  published boolean default false
+  published boolean default false,
+  "order" integer, -- For manual sorting
+  featured boolean default false, -- Featured projects
+  tags text[] -- Array of tags
 );
 
 -- PRESS TABLE

@@ -1,11 +1,14 @@
-import { Hero } from '@/components/home/Hero';
-import { FeaturedProjects } from '@/components/home/FeaturedProjects';
+import HeroSection from '@/components/home/HeroSection'
+import ProjectGrid from '@/components/home/ProjectGrid'
+import { getPublishedProjects } from '@/lib/supabase/queries'
 
-export default function Home() {
+export default async function Home() {
+  const projects = await getPublishedProjects()
+
   return (
-    <>
-      <Hero />
-      <FeaturedProjects />
-    </>
-  );
+    <div className="flex flex-col items-center w-full min-h-screen bg-black">
+      <HeroSection />
+      <ProjectGrid projects={projects} />
+    </div>
+  )
 }
