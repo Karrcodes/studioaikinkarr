@@ -15,9 +15,12 @@ export async function middleware(request: NextRequest) {
             },
         })
 
+        const newHeaders = new Headers(response.headers)
+        newHeaders.set('Cache-Control', 'public, max-age=0, s-maxage=60, stale-while-revalidate=60')
+
         return new NextResponse(response.body, {
             status: response.status,
-            headers: response.headers,
+            headers: newHeaders,
         })
     } catch (error) {
         return NextResponse.json({ error: 'Failed to fetch from Framer' }, { status: 500 })
