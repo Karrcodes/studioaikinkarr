@@ -1,6 +1,6 @@
 # Framer Proxy
 
-This is a simple Next.js app that proxies all requests to your Framer site at `studioaikinkarr.framer.website`.
+This is a simple Next.js app that proxies all requests to your Framer site at `karrtesian.framer.website`.
 
 ## Why?
 

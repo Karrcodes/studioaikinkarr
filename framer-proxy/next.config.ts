@@ -17,7 +17,7 @@ const nextConfig = {
     return [
       {
         source: '/:path*',
-        destination: 'https://studioaikinkarr.framer.website/:path*',
+        destination: 'https://karrtesian.framer.website/:path*',
       },
     ]
   },

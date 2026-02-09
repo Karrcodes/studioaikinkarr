@@ -2,7 +2,7 @@
     "rewrites": [
         {
             "source": "/(.*)",
-            "destination": "https://studioaikinkarr.framer.website/$1"
+            "destination": "https://karrtesian.framer.website/$1"
         }
     ]
 }
